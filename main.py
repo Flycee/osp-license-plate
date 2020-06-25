@@ -21,8 +21,7 @@ def find_plate(image_path):
     big_contours = sorted(contours, key=cv2.contourArea, reverse=True)[:10]
     image_copy = image.copy()
     image_big_contours = cv2.drawContours(image_copy, big_contours, -1, (0, 0, 255), 2)
-    #cv2.imshow("", image_big_contours)
-    #cv2.waitKey(0)
+
     plate = None
     for c in big_contours:
         print(type(c[0][0][0]))
@@ -35,18 +34,24 @@ def find_plate(image_path):
             plate = image[y:y+h, x:x+w]
             break
 
-    #cv2.imwrite("plate.png", plate)
-    labret = [x, y, x+w, y+h]
-    labret = np.array(labret)
+    cv2.imwrite("plate.png", plate)
+    #labret = np.array([x, y, w, h])
+    a=234
+    b=345
+    c=435
+    d=745
+    #labret = [a, b, c, d]
+    labret = [x, y, w, h]
     print(labret)
+    print("siema")
     return labret
 
 
 #import sys
 #find_plate(sys.argv[1])
 
-import cv2
+#import cv2
 #image_path = "C:/Users/Krystian/Desktop/osp_test/tab2.jpg"
+#image_path = "C:/Users/Krystian/Downloads/tab_test.jpg"
 #image_path = "C:/Users/Krystian/PycharmProjects/OSP_license_plate/tab_test.jpg"
-#image_path = "C:/Users/Krystian/PycharmProjects/OSP_license_plate/tablica9.jpg"
 #find_plate(image_path)
