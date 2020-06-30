@@ -16,10 +16,10 @@
 		<Item Name="Doc" Type="Folder" URL="../Doc">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="subVIs" Type="Folder" URL="../subVIs">
+		<Item Name="Lib" Type="Folder" URL="../Lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Temporary" Type="Folder" URL="../Temporary">
+		<Item Name="subVIs" Type="Folder" URL="../subVIs">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
