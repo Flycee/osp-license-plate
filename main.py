@@ -34,16 +34,9 @@ def find_plate(image_path):
             plate = image[y:y+h, x:x+w]
             break
 
-    cv2.imwrite("plate.png", plate)
+    #cv2.imwrite("plate.png", plate)
     #labret = np.array([x, y, w, h])
-    a=234
-    b=345
-    c=435
-    d=745
-    #labret = [a, b, c, d]
     labret = [x, y, w, h]
-    print(labret)
-    print("siema")
     return labret
 
 
